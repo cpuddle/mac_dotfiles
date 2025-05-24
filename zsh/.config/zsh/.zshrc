@@ -3,6 +3,8 @@ autoload -U colors && colors
 export XDG_CONFIG_HOME=$HOME/.config
 export ZDOTDIR=XDG_CONFIG_HOME/zsh
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 PS1="%F{blue}%1~%f %F{green}%f%b "
 
 plugins=(
